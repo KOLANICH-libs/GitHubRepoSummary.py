@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GitHubRepoSummary"
+readme = "ReadMe.md"
+description = "A library and to get a brief description of a GitHub repo to show to a user of a CLI tool."
+authors = [{name = "KOLANICH"}]
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: Developers",
+	"License :: Public Domain",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3 :: Only",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["GitHubRepoSummary"]
+license = {text = "Unlicense"}
+requires-python = ">=3.4"
+dynamic = ["version"]
+dependencies = [
+	"miniGHAPI", # @ git+https://codeberg.org/KOLANICH-libs/miniGHAPI.py
+	"GitHubReadMeRender.py" # @ git+https://codeberg.org/KOLANICH-libs/GitHubReadMeRender.py
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/KOLANICH-libs/GitHubRepoSummary.py"
+
+[tool.setuptools]
+zip-safe = true
+
+[tool.setuptools.packages.find]
+include = ["GitHubRepoSummary", "GitHubRepoSummary.*"]
+
+[tool.setuptools_scm]
