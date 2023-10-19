@@ -1,6 +1,8 @@
 import typing
 from warnings import warn
 
+warn("We have moved from M$ GitHub to https://codeberg.org/KOLANICH-libs/GitHubRepoSummary.py , read why on https://codeberg.org/KOLANICH/Fuck-GuanTEEnomo .")
+
 from miniGHAPI.GitHubAPI import Repo
 
 __all__ = ("formatRepoInfo",)
